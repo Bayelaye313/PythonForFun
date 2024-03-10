@@ -8,3 +8,10 @@
 #You can only use one loop in your code
 #You are not allowed to store numbers or strings in a variable
 # are not allowed to import any module
+
+for j in range(0,100):
+    if j < 10 :
+        print('{}{}'.format(0,j), end=', ')
+    else:
+        print('{}'.format(j), end=', ')
+    

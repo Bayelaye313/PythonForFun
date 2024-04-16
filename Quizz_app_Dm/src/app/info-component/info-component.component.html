@@ -1,0 +1,13 @@
+<div class="info_box" [ngClass]="showInfo ? 'activeInfo' :''">
+    <div class="info-title"><span>Quelques règles du jeu</span></div>
+    <ul class="info-list">
+        <li class="info"><span>15 secondes</span> pour répondre à une question</li>
+        <li class="info">Réponse sélectionnée, pas de retour en arrière</li>
+        <li class="info">Impossible de sélectionner une question une fois le temps écoulé</li>
+        <li class="info">Impossible de quitter le quiz une fois commencé</li>
+    </ul>
+    <div class="buttons">
+        <button class="quit" (click)="QuitQuizz()">Exit Quizz</button>
+        <button class="restart" (click)="ContinueQuizz()">Continue</button>
+    </div>
+</div>

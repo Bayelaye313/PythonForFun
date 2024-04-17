@@ -1,4 +1,4 @@
-<div class="quiz_box"  [ngClass]="showQuestion ? 'activeQuiz' :''">
+<div *ngIf="currentQuestion" class="quiz_box" [ngClass]="showQuestion ? 'activeQuiz' :''">
     <header>
         <div class="title">Leep tchi Sagnou BRT</div>
         <div class="timer">
@@ -8,18 +8,18 @@
         <div class="time_line" style="width: 550px;"></div>
     </header>
     <section>
-        <div class="que_text"><span>3.Qui ne dit mot,...?</span></div>
+        <div class="que_text"><span>{{ currentQuestion.question }}</span></div>
         <div class="option_list">
-            <div class="option correct disabled" onclick=""><span>conscent</span>
+            <div class="option correct disabled" (click)="optionSelected(option)" *ngFor="let option of currentQuestion.options">
+                <span>{{ option.answer }}</span>
                 <div class="icon tick"><i class="fas fa-check" aria-hidden="true"></i></div>
             </div>
-            <div class="option disabled" onclick=""><span>est muet</span></div>
-            <div class="option disabled" onclick=""><span>ne sait rien</span></div>    
         </div>
     </section>
     <footer>
         <div class="total_que">
-            
+            <span><p>{{currentQuestionIndex}}</p> of <p>{{totalQuestions}}</p></span>
         </div>
+        <button class="next_btn show" (click)="nextQuestion()">Next Ques</button>
     </footer>
 </div>

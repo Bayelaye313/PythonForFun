@@ -1,0 +1,295 @@
+[
+    {
+      "station": "Pape Gueye Fall",
+      "zones_correspondance": [
+        "Port de Dakar",
+        "Marché Petersen",
+        "Difonsé",
+        "Palais de justice",
+        "Hôtel de ville de Dakar",
+        "SUP DE CO",
+        "Sapro lait",
+        "Marché Sandaga",
+        "Salle des ventes"
+      ]
+    },
+    {
+      "station": "Grande Mosquée",
+      "zones_correspondance": [
+        "CESAG",
+        "BHS",
+        "Centre Saint Laurent",
+        "Rond-point pompier",
+        "Stade Iba Mar Diop",
+        "RTS",
+        "Gibraltar",
+        "Marché champ de course",
+        "Poste Médina"
+      ]
+    },
+    {
+      "station": "Place de La Nation",
+      "zones_correspondance": [
+        "Marché Colobane",
+        "Clinique Niang",
+        "G15/ESMT",
+        "ANSD",
+        "Lycée Kennedy",
+        "Abass Ndao",
+        "Caisse de sécurité sociale",
+        "Fass",
+        "Impôts et domaines",
+        "Caserne Samba Diery Diallo"
+      ]
+    },
+    {
+      "station": "Dial Diop",
+      "zones_correspondance": [
+        "ENA",
+        "Centre BOPP",
+        "Marché HLM 5",
+        "Ecole Saint Pierre",
+        "Lycée Blaise Diagne",
+        "Zone B/A",
+        "Ampathé Ba",
+        "Massalikoul Jinane"
+      ]
+    },
+    {
+      "station": "Grand Dakar",
+      "zones_correspondance": [
+        "Thiossane",
+        "Point E",
+        "HLM",
+        "Gaspard Kamara",
+        "SUP ECO",
+        "Ecole normale",
+        "Niarry Tally",
+        "Rue 10",
+        "ISM",
+        "Amitié 1 et 2"
+      ]
+    },
+    {
+      "station": "Liberté 1",
+      "zones_correspondance": [
+        "Avenue Bourguiba",
+        "Casino Liberté",
+        "Amitié 3",
+        "Sicap Baobab",
+        "Eglise Saint-Pierre de Baobab",
+        "Collège Sacré Cœur/DSC",
+        "Stade Demba Diop",
+        "SABS",
+        "Karack"
+      ]
+    },
+    {
+      "station": "Sacré Cœur",
+      "zones_correspondance": [
+        "Collège Sacré",
+        "Cœur Boulangerie Jaune",
+        "Ouakam",
+        "VDN",
+        "Sonatel",
+        "Cité Keur Gorgui",
+        "Mermoz",
+        "Clinique Al amine",
+        "BEM"
+      ]
+    },
+    {
+      "station": "Liberté 5",
+      "zones_correspondance": [
+        "IPG/ISTI",
+        "Rond-point JVC",
+        "CETUD",
+        "CEM David Diop",
+        "Marché Baraka",
+        "Liberté 4",
+        "ISEG"
+      ]
+    },
+    {
+      "station": "Liberté 6",
+      "zones_correspondance": [
+        "Sicap-Foire",
+        "Pentola",
+        "Walfadjri",
+        "Sipres",
+        "Dieupeul/Derklé",
+        "Camp pénal",
+        "SAMU",
+        "Ensup",
+        "Camp Leclerc"
+      ]
+    },
+    {
+      "station": "Khar Yallah",
+      "zones_correspondance": [
+        "Cité Keur Khadim",
+        "Ecole Notre Dame du Liban",
+        "Cité Bastos",
+        "Cité RTS",
+        "Cité Conashap",
+        "Zone de captage",
+        "Front de terre",
+        "Rond-point",
+        "Clinique de l’amitié"
+      ]
+    },
+    {
+      "station": "Scat Urbam",
+      "zones_correspondance": [
+        "HLM Grand-Yoff",
+        "Hôpital américain",
+        "Sud-Foire",
+        "Hôpital CTO",
+        "Dibiterie Koromack Faye",
+        "Ecole pédagogue",
+        "Monument Grand-yoff"
+      ]
+    },
+    {
+      "station": "Hyacinthe Thiandoum",
+      "zones_correspondance": [
+        "Cité Millionnaire",
+        "Marché Grand-Yoff",
+        "Autoroute",
+        "Garage Patte d'oie",
+        "Pharmacie Patte d'oie",
+        "Police Grand-Yoff",
+        "Mairie Grand-Yoff",
+        "Station patte d'oie"
+      ]
+    },
+    {
+      "station": "Grand-Médine",
+      "zones_correspondance": [
+        "Nord Foire",
+        "Patte d'oie Builders",
+        "Stade LSS",
+        "Nabil Choucair",
+        "Cité Mixta",
+        "Unité 25 et 26",
+        "Diamalaye",
+        "Mairie Patte d'oie",
+        "ACAPES"
+      ]
+    },
+    {
+      "station": "Police Parcelles",
+      "zones_correspondance": [
+        "Marché Police",
+        "Ecole CSPA",
+        "Ecole pédagogue",
+        "Cité Impôts et domaines",
+        "Unité 13 à 22"
+      ]
+    },
+    {
+      "station": "Croisement 22",
+      "zones_correspondance": [
+        "Parcelles Unité 7 à 14",
+        "Cité Soprim",
+        "Stade Parcelles",
+        "Eglise Parcelles",
+        "Hôpital Mame Abdou",
+        "ACAPES",
+        "Sapeurs Pompiers",
+        "C3S",
+        "Marché Dior"
+      ]
+    },
+    {
+      "station": "Parcelles",
+      "zones_correspondance": [
+        "Cité Fadia",
+        "Brioche Dorée Fadia",
+        "Lycée des Parcelles",
+        "Parcelles Unité 5 et 6",
+        "Marché Gueule tapée",
+        "Hamo 2",
+        "Cambérène"
+      ]
+    },
+    {
+      "station": "Ndingala",
+      "zones_correspondance": [
+        "Lycée des Parcelles",
+        "Cinéma Unité 3",
+        "Marché Unité 3",
+        "Groupe Scolaire La Maïeutique",
+        "Parcelles Unité 1 et 4",
+        "Impôts et domaines"
+      ]
+    },
+    {
+      "station": "Golf Sud",
+      "zones_correspondance": [
+        "Pharmacie Golf",
+        "Hamo 1",
+        "Cité Aliou Sow",
+        "SUPECO",
+        "Cité Douanes",
+        "Cité Gendarmerie",
+        "Cité nations unies",
+        "Cambérène 2"
+      ]
+    },
+    {
+      "station": "Dalal Jamm",
+      "zones_correspondance": [
+        "Hôpital Dalal Jamm/BIPA",
+        "Croisement Béthio",
+        "Malibu",
+        "P.A.I",
+        "HLM Las Palmas",
+        "Tribunal Pikine Guédiawaye",
+        "Canada",
+        "HLM Paris"
+      ]
+    },
+    {
+      "station": "Fith Mith",
+      "zones_correspondance": [
+        "Cité SHS",
+        "Marché Jeudi",
+        "Cité des Enseignants",
+        "Hamo 3",
+        "Lycée Ndiarka Diagne"
+      ]
+    },
+    {
+      "station": "Golf Nord",
+      "zones_correspondance": [
+        "Marché jeudi",
+        "Marché Sahm",
+        "Daara S. Mansour"
+      ]
+    },
+    {
+      "station": "Gueule Tapée",
+      "zones_correspondance": [
+        "Corniche",
+        "Arrêt Dial Mbaye",
+        "Niary Boulangerie",
+        "Hamo 4-5-6",
+        "Police de Guédiawaye"
+      ]
+    },
+    {
+      "station": "Préfecture de Guédiawaye",
+      "zones_correspondance": [
+        "Caserne Pompier Guédiawaye",
+        "Médina Gounass",
+        "Deux voies notaires",
+        "Hôtel de ville de Guédiawaye",
+        "Hôpital Roi Baudouin",
+        "Marché Ndiarème",
+        "Lycée Limamoulaye",
+        "Mosquée Souleymane Baal"
+      ]
+    }
+  ]
+  

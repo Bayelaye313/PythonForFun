@@ -1,25 +1,31 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component(
+{
   selector: 'app-quizz-component',
   templateUrl: './quizz-component.component.html',
   styleUrl: './quizz-component.component.css'
 })
-export class QuizzComponentComponent {
+export class QuizzComponentComponent
+{
   IsStarted:boolean = false;
   showInf:boolean = false;
   showQuestions:boolean = false;
 
-  onStarted(){
+  onStarted()
+  {
     this.IsStarted == !this.IsStarted;
     this.showQuestions = true;
     this.showInf = false
     console.log('questions!!!!')
   }
-  showInfoPop(){
+  showInfoPop()
+  {
     this.showInf = true;
   }
-  quit(){
+
+  quit()
+  {
     this.IsStarted = false;
     this.showInf = false;
   }

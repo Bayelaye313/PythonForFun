@@ -8,11 +8,11 @@
         <div class="time_line" style="width: 550px;"></div>
     </header>
     <section>
-        <div class="que_text"><span>{{ currentQuestion.question }}</span></div>
+        <div class="que_text"><span>{{ currentQuestion?.question }}</span></div>
         <div class="option_list">
-            <div class="option correct disabled" (click)="optionSelected(option)" *ngFor="let option of currentQuestion.options">
+            <div class="option" [class.disabled]="option.isDisabled" (click)="optionSelected(option)" *ngFor="let option of currentQuestion?.options">
                 <span>{{ option.answer }}</span>
-                <div class="icon tick"><i class="fas fa-check" aria-hidden="true"></i></div>
+                <div class="icon tick" *ngIf="option.isCorrect"><i class="fas fa-check" aria-hidden="true"></i></div>
             </div>
         </div>
     </section>

@@ -50,7 +50,8 @@ export class ServicesService {
     } while (attempts < maxAttempts);
 
     return null; // Échec de la recherche d'une question unique après un certain nombre d'essais
-  }  shuffleOptions(question: Question): Question {
+  } 
+  shuffleOptions(question: Question): Question {
     const shuffledOptions = question.options.slice(); // Copie des options
     for (let i = shuffledOptions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

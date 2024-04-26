@@ -30,8 +30,12 @@ export class QuestionComponentComponent implements OnInit{
   getQuestions() {
     this.questionServe.loadQuestions().subscribe(()=>{
     this.currentQuestion = this.questionServe.getRandomQuestion();
-    this.remainingTime = 15;
-    this.startTimer();
+    if (this.currentQuestion) {
+      this.currentQuestion = this.questionServe.shuffleOptions(this.currentQuestion);
+      this.remainingTime = 15;
+      this.startTimer();
+  
+    } 
    });
   }
   startTimer() {

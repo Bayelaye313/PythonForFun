@@ -1,5 +1,5 @@
 <div class="start_btn">
     <button (click)="showInfoPop()">Start Quizz</button>
 </div>
-<app-info-component [showInfo]="showInf" (ContinueQuizzEvent)="onStarted()" (QuitQuizzEvent)="quit()"></app-info-component>
-<app-question-component [showQuestion]="showQuestions" ></app-question-component>
+<app-info-component [showInfos] = showInfo (exitGame)="quit()" (playGame)="onStarted()"></app-info-component>
+<app-question-component [showQuestions]="showQuestions" ></app-question-component>

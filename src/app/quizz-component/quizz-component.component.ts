@@ -9,24 +9,22 @@ import { Component } from '@angular/core';
 export class QuizzComponentComponent
 {
   IsStarted:boolean = false;
-  showInf:boolean = false;
   showQuestions:boolean = false;
+  showInfo:boolean = false;
 
-  onStarted()
-  {
-    this.IsStarted == !this.IsStarted;
-    this.showQuestions = true;
-    this.showInf = false
-    console.log('questions!!!!')
+  onStarted(){
+  this.IsStarted = true;
+  this.showQuestions = true;
+  this.showInfo = false;  
   }
   showInfoPop()
   {
-    this.showInf = true;
+    this.showInfo = true;
   }
 
   quit()
   {
     this.IsStarted = false;
-    this.showInf = false;
+    this.showInfo = false;
   }
 }

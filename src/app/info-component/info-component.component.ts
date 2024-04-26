@@ -5,16 +5,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './info-component.component.html',
   styleUrl: './info-component.component.css'
 })
-export class InfoComponentComponent {
-  @Input() showInfo: boolean = false;
-  @Output() QuitQuizzEvent = new EventEmitter<void>();
-  @Output() ContinueQuizzEvent = new EventEmitter<void>();
+export class InfoComponentComponent
+{
+  @Input() showInfos : boolean = false;
+  @Output() exitGame = new EventEmitter<void>();
+  @Output() playGame = new EventEmitter<void>();
 
-  QuitQuizz(){
-    this.QuitQuizzEvent.emit();
-  }
-  ContinueQuizz(){
-    this.ContinueQuizzEvent.emit();
-  }
-
+  QuitQuizz(){this.exitGame.emit()};
+  ContinueQuizz(){this.playGame.emit()};
 }

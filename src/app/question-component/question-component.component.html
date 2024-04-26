@@ -1,24 +1,35 @@
-<div *ngIf="currentQuestion" class="quiz_box" [ngClass]="showQuestion ? 'activeQuiz' :''">
+<div class="quiz_box" [ngClass]="showQuestions ? 'activeQuiz' : ''">
     <header>
         <div class="title">Leep tchi Sagnou BRT</div>
         <div class="timer">
-            <div class="time_left_txt">Time Off</div>
-            <time class="sec">00</time>
+            <div class="time_left_txt">Time Left</div>
+            <time class="sec">{{ remainingTime | number: '2.0-0' }}</time>
         </div>
         <div class="time_line" style="width: 550px;"></div>
     </header>
-    <section>
-        <div class="que_text"><span>{{ currentQuestion?.question }}</span></div>
+    <section *ngIf="currentQuestion">
+        <div class="que_text"><span>{{ currentQuestion.question }}</span></div>
         <div class="option_list">
-            <div class="option" [class.disabled]="option.isDisabled" (click)="optionSelected(option)" *ngFor="let option of currentQuestion?.options">
+            <div
+                class="option"
+                *ngFor="let option of currentQuestion.options"
+                [ngClass]="{
+                    'correct': option.isCorrect && option.isSelected,
+                    'incorrect': !option.isCorrect && option.isSelected,
+                    'disabled': option.isDisabled
+                }"
+                (click)="optionSelected(option)"
+            >
                 <span>{{ option.answer }}</span>
-                <div class="icon tick" *ngIf="option.isCorrect"><i class="fas fa-check" aria-hidden="true"></i></div>
+                <div class="icon tick" *ngIf="option.isCorrect && option.isSelected">
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </section>
     <footer>
         <div class="total_que">
-            <span><p>{{currentQuestionIndex}}</p> of <p>{{totalQuestions}}</p></span>
+            <span><p>{{ currentQuestionIndex }}</p> of <p>{{ totalQuestions }}</p></span>
         </div>
         <button class="next_btn show" (click)="nextQuestion()">Next Ques</button>
     </footer>

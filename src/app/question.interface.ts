@@ -10,4 +10,5 @@ export interface Question {
 interface Option {
     answer: string;
     isCorrect: boolean;
+    isDisabled: boolean;
 }

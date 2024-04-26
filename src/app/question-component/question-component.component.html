@@ -1,6 +1,6 @@
 <div class="quiz_box" [ngClass]="showQuestions ? 'activeQuiz' : ''">
     <header>
-        <div class="title">Leep tchi Sagnou BRT</div>
+        <div class="title">Leep tchi Sunu BRT</div>
         <div class="timer">
             <div class="time_left_txt">Time Left</div>
             <time class="sec">{{ remainingTime | number: '2.0-0' }}</time>
@@ -31,6 +31,8 @@
         <div class="total_que">
             <span><p>{{ currentQuestionIndex }}</p> of <p>{{ totalQuestions }}</p></span>
         </div>
-        <button class="next_btn show" (click)="nextQuestion()">Next Ques</button>
+        <button *ngIf="currentQuestionIndex+1 == totalQuestions" class="next_btn show" (click)="GameOver()">Finish</button>
+        <button *ngIf="currentQuestionIndex+1 !== totalQuestions" class="next_btn show" (click)="nextQuestion()">Next Ques</button>
     </footer>
 </div>
+<app-response-component ></app-response-component>

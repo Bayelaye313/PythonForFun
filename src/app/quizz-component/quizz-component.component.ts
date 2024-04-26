@@ -9,13 +9,15 @@ import { Component } from '@angular/core';
 export class QuizzComponentComponent
 {
   IsStarted:boolean = false;
+  isEnded: boolean = false;
   showQuestions:boolean = false;
   showInfo:boolean = false;
 
   onStarted(){
   this.IsStarted = true;
   this.showQuestions = true;
-  this.showInfo = false;  
+  this.showInfo = false;
+  this.isEnded = false;  
   }
   showInfoPop()
   {
@@ -26,5 +28,9 @@ export class QuizzComponentComponent
   {
     this.IsStarted = false;
     this.showInfo = false;
+  }
+  finish(){
+    this.isEnded = true;
+    this.IsStarted = false
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ServicesService } from '../questionService/services.service';
 import { Question } from '../question.interface';
 import { Subscription, interval } from 'rxjs';
@@ -10,10 +10,12 @@ import { Subscription, interval } from 'rxjs';
 })
 export class QuestionComponentComponent implements OnInit{
   @Input() showQuestions:boolean = false;
+  @Input() showResults:boolean = false;
+  @Output() finished = new EventEmitter<void>();
   currentQuestion: Question | undefined;
   correctAnswerCount: number = 0;
   currentQuestionIndex: number = 1;
-  totalQuestions: number = 30;
+  totalQuestions: number = 5;
 
   remainingTime:number = 10;
 
@@ -44,7 +46,7 @@ export class QuestionComponentComponent implements OnInit{
       if (this.remainingTime > 0) {
         this.remainingTime--;
       } else {
-        this.nextQuestion(); // Passage automatique à la question suivante lorsque le temps est écoulé
+        this.nextQuestion();
       }
     });
   }
@@ -68,7 +70,7 @@ export class QuestionComponentComponent implements OnInit{
         }
       });
 
-      this.stopTimer(); // Arrêter le chronomètre lorsqu'une option est sélectionnée
+      this.stopTimer();
     }
   }
 
@@ -79,7 +81,10 @@ export class QuestionComponentComponent implements OnInit{
       this.currentQuestionIndex++;
       this.getQuestions();
     } else {
-  }
+      console.log('les reponses correct: ',this.correctAnswerCount)
+  };
 }
+GameOver(){this.finished.emit()};
+
   
 }

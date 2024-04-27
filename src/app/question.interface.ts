@@ -11,4 +11,5 @@ interface Option {
     answer: string;
     isCorrect: boolean;
     isDisabled: boolean;
+    isSelected: boolean;
 }

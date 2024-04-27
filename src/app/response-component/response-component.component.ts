@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-response-component',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './response-component.component.css'
 })
 export class ResponseComponentComponent {
+  @Input() showResult : boolean = false;
+  @Input() scoreFinal : number = 0;
 
+  @Output() restartGame = new EventEmitter<void>();
+  @Output() exitGame = new EventEmitter<void>();
+  
+
+  QuitQuizz(){this.exitGame.emit()};
+  ReplayQuizz(){this.restartGame.emit()};
 }

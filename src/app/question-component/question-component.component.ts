@@ -11,7 +11,7 @@ import { Subscription, interval } from 'rxjs';
 export class QuestionComponentComponent implements OnInit{
   @Input() showQuestions:boolean = false;
   @Input() showResults:boolean = false;
-  @Output() finished = new EventEmitter<void>();
+  @Output() finished = new EventEmitter<number>();
   currentQuestion: Question | undefined;
   correctAnswerCount: number = 0;
   currentQuestionIndex: number = 1;
@@ -81,10 +81,11 @@ export class QuestionComponentComponent implements OnInit{
       this.currentQuestionIndex++;
       this.getQuestions();
     } else {
+      this.GameOver();
       console.log('les reponses correct: ',this.correctAnswerCount)
   };
 }
-GameOver(){this.finished.emit()};
-
-  
+GameOver():void{
+  this.stopTimer();
+  this.finished.emit(this.correctAnswerCount)};
 }

@@ -1,5 +1,6 @@
 <div class="start_btn">
     <button (click)="showInfoPop()">Start Quizz</button>
 </div>
-<app-info-component [showInfos] = showInfo (exitGame)="quit()" (playGame)="onStarted()" ></app-info-component>
-<app-question-component [showQuestions]="showQuestions" (finished)="finish()" ></app-question-component>
+<app-info-component [showInfos] = "showInfo" (exitGame)="quitGame()" (playGame)="onStarted()" ></app-info-component>
+<app-question-component [showQuestions]="showQuestions" (finished)="finishGame($event)" ></app-question-component>
+<app-response-component [showResult]="showResults" [scoreFinal]="result" ></app-response-component>

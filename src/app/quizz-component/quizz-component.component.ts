@@ -9,28 +9,35 @@ import { Component } from '@angular/core';
 export class QuizzComponentComponent
 {
   IsStarted:boolean = false;
-  isEnded: boolean = false;
   showQuestions:boolean = false;
   showInfo:boolean = false;
+  showResults:boolean = false;
+  result:number = 0;
 
   onStarted(){
   this.IsStarted = true;
   this.showQuestions = true;
   this.showInfo = false;
-  this.isEnded = false;  
+  this.showResults = false;
   }
   showInfoPop()
   {
     this.showInfo = true;
   }
+  showResultPop(){
+      this.showResults = true;
+  }
 
-  quit()
+  quitGame()
   {
     this.IsStarted = false;
     this.showInfo = false;
+    this.showResults = false;
   }
-  finish(){
-    this.isEnded = true;
-    this.IsStarted = false
+  finishGame(score:number){
+    this.result = score;
+    this.IsStarted = false;
+    this.showResultPop();
+    this.showQuestions = false;
   }
 }

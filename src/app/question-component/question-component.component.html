@@ -31,8 +31,7 @@
         <div class="total_que">
             <span><p>{{ currentQuestionIndex }}</p> of <p>{{ totalQuestions }}</p></span>
         </div>
-        <button *ngIf="currentQuestionIndex+1 == totalQuestions" class="next_btn show" (click)="GameOver()">Finish</button>
-        <button *ngIf="currentQuestionIndex+1 !== totalQuestions" class="next_btn show" (click)="nextQuestion()">Next Ques</button>
+        <button *ngIf="currentQuestionIndex == totalQuestions" class="next_btn show" (click)="GameOver()">Finish</button>
+        <button *ngIf="currentQuestionIndex !== totalQuestions" class="next_btn show" (click)="nextQuestion()">Next Ques</button>
     </footer>
 </div>
-<app-response-component ></app-response-component>

@@ -1,1 +1,11 @@
-<p>response-component works!</p>
+<div class="result_box" [ngClass]="showResult ? 'activeResult' : ''">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+    </div>
+    <div class="complete_text">You've Completed The Quizz! congrats!!</div>
+    <div class="score_text" ><span>score finale {{scoreFinal}} / 5</span></div>
+    <div class="buttons">
+        <button class="quit" (click)="QuitQuizz()">Exit Quizz</button>
+        <button class="restart" (click)="ReplayQuizz()">Continue</button>
+    </div>
+

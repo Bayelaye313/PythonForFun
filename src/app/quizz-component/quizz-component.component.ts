@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { QuestionComponentComponent } from '../question-component/question-component.component';
 
 @Component(
 {
@@ -6,19 +7,21 @@ import { Component } from '@angular/core';
   templateUrl: './quizz-component.component.html',
   styleUrl: './quizz-component.component.css'
 })
-export class QuizzComponentComponent
+export class QuizzComponentComponent implements OnInit
 {
-  IsStarted:boolean = false;
+  @ViewChild(QuestionComponentComponent) questionComponent: QuestionComponentComponent | undefined;
+  ngOnInit(): void {
+  }
   showQuestions:boolean = false;
   showInfo:boolean = false;
   showResults:boolean = false;
   result:number = 0;
 
   onStarted(){
-  this.IsStarted = true;
   this.showQuestions = true;
   this.showInfo = false;
   this.showResults = false;
+  this.result = 0;
   }
   showInfoPop()
   {
@@ -30,14 +33,32 @@ export class QuizzComponentComponent
 
   quitGame()
   {
-    this.IsStarted = false;
     this.showInfo = false;
     this.showResults = false;
   }
   finishGame(score:number){
     this.result = score;
-    this.IsStarted = false;
     this.showResultPop();
     this.showQuestions = false;
   }
+  resetQuizFromParent() {
+    console.log('Attempting to reset quiz from parent component...');
+    if (this.questionComponent) {
+      console.log('Resetting quiz in child component...');
+      this.questionComponent.resetQuiz();
+    }
+  }
+  exitGame(){
+    this.showInfo = false;
+    this.showResults = false;
+    this.showQuestions = false;
+    this.resetQuizFromParent();
+  }
+  startAgain(){
+    this.resetQuizFromParent();
+    this.showQuestions = true;
+    this.showInfo = false;
+    this.showResults = false;
+    this.result = 0;  
+}
 }

@@ -12,7 +12,7 @@ export class ServicesService {
   private questionUrl = 'assets/question.json';
   private questionsAskedIds: number[] = [];
 
-  constructor(private http: HttpClient) {this.loadQuestions();}
+  constructor(private http: HttpClient) {}
   ngOnInit():void{this.loadQuestions();}
 
   //loading questions from json file

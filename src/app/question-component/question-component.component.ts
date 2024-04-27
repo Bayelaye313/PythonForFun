@@ -34,7 +34,7 @@ export class QuestionComponentComponent implements OnInit{
     this.currentQuestion = this.questionServe.getRandomQuestion();
     if (this.currentQuestion) {
       this.currentQuestion = this.questionServe.shuffleOptions(this.currentQuestion);
-      this.remainingTime = 15;
+      this.remainingTime = 10;
       this.startTimer();
   
     } 
@@ -88,4 +88,12 @@ export class QuestionComponentComponent implements OnInit{
 GameOver():void{
   this.stopTimer();
   this.finished.emit(this.correctAnswerCount)};
+  
+  resetQuiz(): void {
+    this.currentQuestion = undefined;
+    this.correctAnswerCount = 0;
+    this.currentQuestionIndex = 0;
+    this.remainingTime = 10;
+    this.nextQuestion();
+  }
 }

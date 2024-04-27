@@ -3,4 +3,4 @@
 </div>
 <app-info-component [showInfos] = "showInfo" (exitGame)="quitGame()" (playGame)="onStarted()" ></app-info-component>
 <app-question-component [showQuestions]="showQuestions" (finished)="finishGame($event)" ></app-question-component>
-<app-response-component [showResult]="showResults" [scoreFinal]="result" ></app-response-component>
+<app-response-component [showResult]="showResults" [scoreFinal]="result" (quitGame)="exitGame()" (restartGame)="startAgain()" ></app-response-component>

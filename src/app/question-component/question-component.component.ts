@@ -90,10 +90,15 @@ GameOver():void{
   this.finished.emit(this.correctAnswerCount)};
   
   resetQuiz(): void {
-    this.currentQuestion = undefined;
     this.correctAnswerCount = 0;
     this.currentQuestionIndex = 0;
     this.remainingTime = 10;
-    this.getQuestions();
+        // Reset selected options in each question
+        if (this.currentQuestion && this.currentQuestion.options) {
+          // Réinitialiser les options sélectionnées pour chaque question
+          this.currentQuestion.options.forEach((option) => {
+            option.isSelected = false;
+          });
+        }
   }
 }

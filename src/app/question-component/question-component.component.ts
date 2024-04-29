@@ -74,7 +74,7 @@ export class QuestionComponentComponent implements OnInit{
     }
   }
 
-  nextQuestion() {
+  private nextQuestion() {
     // Arrêtez le chronomètre si l'utilisateur passe à la question suivante avant la fin du temps imparti
     // Passez à la question suivante
     if (this.currentQuestionIndex < this.totalQuestions) {
@@ -85,20 +85,22 @@ export class QuestionComponentComponent implements OnInit{
       console.log('les reponses correct: ',this.correctAnswerCount)
   };
 }
-GameOver():void{
+private GameOver():void{
   this.stopTimer();
   this.finished.emit(this.correctAnswerCount)};
   
   resetQuiz(): void {
     this.correctAnswerCount = 0;
-    this.currentQuestionIndex = 0;
+    this.currentQuestionIndex = 1;
     this.remainingTime = 10;
         // Reset selected options in each question
-        if (this.currentQuestion && this.currentQuestion.options) {
+        /*if (this.currentQuestion && this.currentQuestion.options) {
           // Réinitialiser les options sélectionnées pour chaque question
           this.currentQuestion.options.forEach((option) => {
             option.isSelected = false;
           });
-        }
+        }*/
+        this.getQuestions();
+
   }
 }

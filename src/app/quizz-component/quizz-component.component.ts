@@ -10,12 +10,11 @@ import { QuestionComponentComponent } from '../question-component/question-compo
 export class QuizzComponentComponent implements OnInit
 {
   @ViewChild(QuestionComponentComponent) questionComponent: QuestionComponentComponent | undefined;
-  ngOnInit(): void {
-  }
   showQuestions:boolean = false;
   showInfo:boolean = false;
   showResults:boolean = false;
   result:number = 0;
+  ngOnInit(): void {}
 
   onStarted(){
   this.showQuestions = true;
@@ -42,12 +41,8 @@ export class QuizzComponentComponent implements OnInit
     this.showResultPop();
     this.showQuestions = false;
   }
-  resetQuizFromParent() {
-    console.log('Attempting to reset quiz from parent component...');
-    if (this.questionComponent) {
-      console.log('Resetting quiz in child component...');
+  private resetQuizFromParent() {
       this.questionComponent.resetQuiz();
-    }
   }
   exitGame(){
     this.showInfo = false;

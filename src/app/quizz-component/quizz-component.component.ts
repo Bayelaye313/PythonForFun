@@ -22,6 +22,7 @@ export class QuizzComponentComponent implements OnInit
   this.showInfo = false;
   this.showResults = false;
   this.result = 0;
+  this.questionComponent?.stopTimer();
   }
   showInfoPop()
   {

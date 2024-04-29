@@ -94,6 +94,6 @@ GameOver():void{
     this.correctAnswerCount = 0;
     this.currentQuestionIndex = 0;
     this.remainingTime = 10;
-    this.nextQuestion();
+    this.getQuestions();
   }
 }
